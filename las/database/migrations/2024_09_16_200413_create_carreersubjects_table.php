@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('carreersubjects', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->int('subject_id');
-            $table->int('carreer_id');
-            
+            $table->foreign('subject_id')->references('id')->on('subjects');
+            $table->foreign('carreer_id')->references('id')->on('carreers');
         });
     }
 

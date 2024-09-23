@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('document_kind');
             $table->string('description');
             $table->string('document');
-            $table->foreignId('student_id')->constrained();
+            $table->foreignId('student_id')->references('id')->on('students');
             $table->timestamps();
         });
     }
