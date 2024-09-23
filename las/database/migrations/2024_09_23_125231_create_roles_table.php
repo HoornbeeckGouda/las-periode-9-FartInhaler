@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('carreersubjects', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
+            $table->string('role');
             $table->timestamps();
-            $table->foreign('subject_id')->references('id')->on('subjects');
-            $table->foreign('carreer_id')->references('id')->on('carreers');
         });
     }
 
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('carreersubjects');
+        Schema::dropIfExists('roles');
     }
 };
