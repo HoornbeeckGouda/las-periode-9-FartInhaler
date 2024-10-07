@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Subjectgrades;
 
 class SubjectgradesSeeder extends Seeder
 {
@@ -12,6 +13,10 @@ class SubjectgradesSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Subjectgrades::factory(10)->create(
+            [
+                
+            ]
+        );
     }
 }

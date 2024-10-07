@@ -17,7 +17,7 @@ class SubjectgradesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'grade' => fake()->randomFloat(2, 0, 10)
         ];
     }
 }

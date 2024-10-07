@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('students', function (Blueprint $table) {
+        Schema::create('teachers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('surname');
-            $table->string('official_name');
-            $table->string('zipcode');
-            $table->string('city');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('subject_id')->constrained();
+            $table->boolean('is_lob')->default(false);
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('students');
+        Schema::dropIfExists('teachers');
     }
 };

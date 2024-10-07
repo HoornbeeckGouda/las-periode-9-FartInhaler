@@ -16,8 +16,16 @@ class StudentFactory extends Factory
      */
     public function definition(): array
     {
+        $firstName = $this->faker->firstName();
+        $lastName = $this->faker->lastName();
+        $officialName = $firstName . ' ' . $lastName; 
+         
         return [
-            //
+            'name' => $firstName,
+            'surname' => $lastName,
+            'official_name' => $officialName,
+            'zipcode' => $this->faker->postcode(),
+            'city' => $this->faker->city(),
         ];
     }
 }

@@ -13,8 +13,6 @@ class CarreersubjectSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('carreersubjects')->insert([
-            []
-        ]);
+        //
     }
 }

@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Course>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Teacher>
  */
-class CourseFactory extends Factory
+class TeacherFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,8 +16,10 @@ class CourseFactory extends Factory
      */
     public function definition(): array
     {
+        $firstName = $this->faker->firstName();
+         
         return [
-            'course' => $this->faker->word()
+            'name' => $firstName,
         ];
     }
 }

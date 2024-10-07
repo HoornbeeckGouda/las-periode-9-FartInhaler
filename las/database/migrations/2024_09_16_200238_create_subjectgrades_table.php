@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('subjectgrades', function (Blueprint $table) {
             $table->id();
+            $table->integer('grade');
             $table->timestamps();
         });
     }

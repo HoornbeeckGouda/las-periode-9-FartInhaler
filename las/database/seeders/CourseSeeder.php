@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\Course;
 
 class CourseSeeder extends Seeder
 {
@@ -12,6 +13,8 @@ class CourseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Course::factory()->count(10)->create(
+
+        );
     }
 }

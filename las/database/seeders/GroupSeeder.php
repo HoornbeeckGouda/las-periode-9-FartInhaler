@@ -14,16 +14,12 @@ class GroupSeeder extends Seeder
     public function run(): void
     {
         DB::table('groups')->insert([
-            'id' => 1,
-            'name' => 'PGR',
-            'id' => 2,
-            'name' => 'ENG',
-            'id' => 3,
-            'name' => 'NL',
-            'id' => 4,
-            'name' => 'SWO',
-            'id' => 5,
-            'name' => 'GDT'
+            ['name' => 'T4i1AD'],
+            ['name' => 'T4i2AD'],
+            ['name' => 'T4i3AD'],
+            ['name' => 'T4i1BD'],
+            ['name' => 'T4i2BD'],
+            ['name' => 'T4i3BD']
         ]);
     }
 }
